@@ -1,7 +1,7 @@
 @import "utils/libs";
 @import "utils/vars";
 @import "utils/fonts";
-// @import '../img/sprite/sprite.less';
+@import '../img/sprite/sprite';
 
 html {
   font-size: $base-font-size;
@@ -12,7 +12,8 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+	line-height: 1.5;
+	font-family: $mainFont;
 }
 
 *,
