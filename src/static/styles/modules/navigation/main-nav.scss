@@ -1,0 +1,12 @@
+.main-nav {
+	padding: 0 25px;
+	
+	&__list {
+		display: flex;
+		align-items: center;
+		height: 60px;
+	}
+	&__link {
+		padding: 20px 15px;
+	}
+}

@@ -1,0 +1,14 @@
+.info {
+	display: flex;
+	align-items: center;
+	&__item {
+		height: 60px;
+		padding: 0 30px;
+		display: flex;
+		align-items: center;
+	}
+	&__select {
+		border: none;
+		color: $placeholderColor;
+	}
+}

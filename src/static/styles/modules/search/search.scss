@@ -1,0 +1,32 @@
+.search {
+	border: 1px solid $borderColor;
+	&-form {
+		&__input {
+			width: 275px;
+			// max-width: 275px;
+			border: none;
+			font-size: 14px;
+			padding: 10px 15px;
+			border-right: 1px solid $borderColor;
+			&::placeholder {
+				color: $placeholderColor;
+			}
+		}
+		&__select {
+			border: none;
+			color: $placeholderColor;
+			padding: 10px 15px;
+			border-right: 1px solid $borderColor;
+		}
+		&__btn {
+			background: none;
+			border: none;
+			padding: 10px 15px;
+			cursor: pointer;
+			i {
+				display: inline-block;
+				@include sprite($search);
+			}
+		}
+	}
+}

@@ -12,8 +12,9 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-	line-height: 1.5;
+	line-height: 1.2;
 	font-family: $mainFont;
+	font-weight: 500;
 }
 
 *,
@@ -42,6 +43,11 @@ dl,
 dd { margin: 0; }
 
 a:not([class]) { text-decoration-skip-ink: auto; }
+a {
+	text-decoration: none;
+	color: $linkColor;
+	font-weight: 500;
+}
 
 img {
   max-width: 100%;
@@ -92,6 +98,10 @@ button { outline: none; }
   max-width: $content-size;
   width: 100%;
 }
-
+.logo {
+	font-size: 22px;
+	font-weight: 900;
+	color: #4d4d4d;
+}
 //Модули
 @import "modules/modules";

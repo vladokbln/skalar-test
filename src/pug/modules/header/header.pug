@@ -12,14 +12,41 @@ header.header
 						option Category 3
 						option Category 4
 						option Category 5
-					input(type="submit", value="")
-			ul.header-actions
-				li.header-actions
-					span.header-actions__icon.header-actions__icon--cart
-					a(href="#").header-actions__text 2 Items
-				li.header-actions
-					span.header-actions__icon.header-actions__icon--list
-					a(href="#").header-actions__text Wish List
-				li.header-actions
-					span.header-actions__icon.header-actions__icon--user
-					a(href="#").header-actions__text Sing in
+					button.search-form__btn
+						i.search-form__btn-icon
+			ul.actions.header-top__actions
+				li.actions__item
+					a(href="#").actions__link
+						i.actions__icon.actions__icon--cart
+						span.actions__text 2 Items
+				li.actions__item
+					a(href="#").actions__link
+						i.actions__icon.actions__icon--like
+						span(href="#").actions__text Wish List
+				li.actions__item
+					a(href="#").actions__link
+						i.actions__icon.actions__icon--user
+						span(href="#").actions__text Sing in
+	.header-main
+		.container
+			include ../navigation/catalog-nav
+			include ../navigation/main-nav
+			.info.header-main__info
+				.info__item
+					select.info__select(name="")
+						option(value disabled selected) Help
+						option() Option 1
+						option() Option 2
+						option() Option 3
+				.info__item
+					select.info__select(name="")
+						option(value disabled selected) USD
+						option() RUB
+						option() UAH
+						option() USD
+				.info__item
+					select.info__select(name="")
+						option(value disabled selected) Language
+						option() RU
+						option() UA
+						option() ENG
