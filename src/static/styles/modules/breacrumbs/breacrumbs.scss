@@ -1,0 +1,31 @@
+.breacrumbs {
+	&__wrap {
+		margin-top: 40px;
+		.container {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		padding: 0 15px;
+	}
+	&__link {
+		font-size: 13px;
+		color: $breacrumbsColor;
+		position: relative;
+	}
+	&__icon {
+		display: inline-block;
+		margin: 0 20px;
+		@include sprite($arrow-breacrumbs);
+	}
+	&__current {
+		font-size: 13px;
+		color: #666;
+	}
+	&__share {
+		margin-left: auto;
+	}
+}
