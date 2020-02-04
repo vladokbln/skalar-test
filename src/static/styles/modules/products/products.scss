@@ -1,0 +1,83 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__sale {
+    width: 65px;
+    font-size: 10px;
+    font-weight: 900;
+    color: $placeholderColor;
+    display: inline-block;
+    padding: 5px 8px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+  }
+
+  &__tools {
+    margin-left: auto !important;
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 255px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  &__img {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__rating {
+    margin-bottom: 20px;
+  }
+}
+
+.products-price {
+  font-size: 16px;
+  font-weight: 900;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: block;
+    margin-left: 15px;
+    @include sprite($price-cart);
+
+    .products-price__btn:hover & {
+      @include sprite($price-cart-active);
+    }
+  }
+}
+
+@import "tools";
+@import "rating";

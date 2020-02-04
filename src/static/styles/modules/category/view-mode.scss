@@ -1,0 +1,36 @@
+.view-mode {
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-left: 1px solid $borderColor;
+    height: 100%;
+    padding: 0 20px;
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    &--grid {
+      @include sprite($grid);
+
+      .view-mode__item.is-active & {
+        @include sprite($grid-active);
+      }
+
+    }
+
+    &--list {
+      @include sprite($list);
+
+      .view-mode__item.is-active & {
+        @include sprite($list-active);
+      }
+    }
+  }
+}

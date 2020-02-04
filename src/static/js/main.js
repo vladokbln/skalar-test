@@ -15,6 +15,14 @@ $(document).ready(function() {
     var sidebarContent = $(this).closest(".sidebar__content");
     sidebarContent.toggleClass("is-active");
   });
+  $(document).on("click", ".view-mode__item", function() {
+    $(".view-mode__item").removeClass("is-active");
+    $(this).addClass("is-active");
+  });
+  $(document).on("click", ".sorter__item", function() {
+    $(".sorter__item").removeClass("is-active");
+    $(this).addClass("is-active");
+  });
 
   sandwichClick();
 });

@@ -15,6 +15,7 @@ body {
   line-height: 1.2;
   font-family: $mainFont;
   font-weight: 500;
+  color: $mainFontColor;
 }
 
 *,
@@ -58,7 +59,7 @@ a {
 
 img {
   max-width: 100%;
-  display: block;
+  display: inline-block;
 }
 
 input,
@@ -110,6 +111,7 @@ button {
 
 .content {
   flex: 1 0 auto;
+  background-color: #fafafa;
 }
 
 .container {

@@ -1,0 +1,39 @@
+.tools {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background: none;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: block;
+
+    &--list {
+      @include sprite($tools-list);
+
+      .tools__btn:hover & {
+        @include sprite($tools-list-active);
+      }
+    }
+
+    &--like {
+      @include sprite($tools-like);
+
+      .tools__btn:hover & {
+        @include sprite($tools-like-active);
+      }
+    }
+  }
+}

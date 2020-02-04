@@ -1,0 +1,51 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+
+  &__btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: $placeholderColor;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 5px 0;
+
+    &:hover {
+      color: $activeColor;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    &--prev {
+      @include sprite($page-prev);
+      margin-right: 20px;
+
+      .pagination__btn:hover & {
+        @include sprite($page-prev-active);
+      }
+    }
+
+    &--next {
+      @include sprite($page-next);
+      margin-left: 20px;
+
+      .pagination__btn:hover & {
+        @include sprite($page-next-active);
+      }
+    }
+  }
+
+  &__text {
+    vertical-align: middle;
+  }
+}

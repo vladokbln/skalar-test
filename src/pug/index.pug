@@ -8,6 +8,34 @@ block content
 	main.main.category__wrap
 		.container
 			h1.category__title Smartphones
-			.category-flex
-				include modules/sidebar/sidebar
+			.category__flex
+				.category-sidebar
+					include modules/sidebar/sidebar
 				.category
+					.category-header
+						.sorter.category__sorter
+							ul.sorter__list
+								li.sorter__item.is-active
+									span.sorter__text Popular products
+								li.sorter__item
+									span.sorter__text Low price
+								li.sorter__item
+									span.sorter__text High price
+						.view-mode.category__view-mode
+							.view-mode__item.is-active
+								i.view-mode__icon.view-mode__icon--grid
+							.view-mode__item
+								i.view-mode__icon.view-mode__icon--list
+					.category-main
+						include modules/products/products
+					.pagination.category-pagination
+						button.pagination__btn
+							i.pagination__icon.pagination__icon--prev
+							span.pagination__text prevision page
+						ul.pagination__list
+							li.pagination__item
+								a.pagination__link(href="#") 1
+						button.pagination__btn
+							span.pagination__text next page
+							i.pagination__icon.pagination__icon--next
+
