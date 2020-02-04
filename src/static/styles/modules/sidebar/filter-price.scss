@@ -1,0 +1,67 @@
+.filter-price {
+  &__wrap {
+    padding: 20px 0;
+  }
+
+  background-color: $borderColor;
+  border: transparent;
+
+  &.noUi-horizontal {
+    height: 4px;
+    border-radius: 2px;
+
+    .noUi-handle {
+      width: 16px;
+      height: 16px;
+      right: -16px;
+      top: -6px;
+      background-color: $activeColor;
+      box-shadow: none;
+      border-radius: 50%;
+      border: transparent;
+
+      &-upper {
+        right: 0px;
+      }
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .noUi-connect {
+    background: $activeColor;
+    width: 99%;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__input {
+    margin-top: 30px;
+    width: 90px;
+    height: 40px;
+    border: 1px solid $borderColor;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 12px;
+    color: $mainFontColor;
+
+    &:focus {
+      border-color: #ccc;
+    }
+  }
+
+  &__divider {
+    width: 9px;
+    height: 1px;
+    background-color: $mainFontColor;
+  }
+}

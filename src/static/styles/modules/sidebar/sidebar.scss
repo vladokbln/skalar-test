@@ -1,0 +1,83 @@
+.sidebar {
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  width: 255px;
+  flex: 0 0 255px;
+  color: $mainFontColor;
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+
+    .sidebar__item.is-active & {
+      max-height: 999px;
+      transition: max-height 0.5s ease-in;
+    }
+
+    &.is-active {
+      .sidebar-btn__all:before {
+        content: "-";
+      }
+
+      .sidebar__list {
+        max-height: 999px;
+        transition: max-height 1s ease-in;
+      }
+    }
+  }
+
+  &__list {
+    max-height: 160px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  &__item {
+    padding: 0 20px;
+    border-bottom: 1px solid $borderColor;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 20px 0;
+  }
+
+  &__icon {
+    display: inline-block;
+    transform: rotate(180deg);
+    transition: 0.6s;
+    @include sprite($sidebar-arrow);
+
+    .sidebar__item.is-active & {
+      transform: rotate(0deg);
+    }
+  }
+
+  &-btn__all {
+    position: relative;
+    padding: 10px 0 10px 30px;
+    font-size: 10px;
+    font-weight: 900;
+    color: $placeholderColor;
+    text-transform: uppercase;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &:before {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      font-size: 12px;
+    }
+  }
+}
+
+@import "filter-price";
+@import "filter-check";

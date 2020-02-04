@@ -1,0 +1,65 @@
+.filter-check {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 105px;
+    padding: 10px 0;
+  }
+
+  &__input {
+    appearance: none;
+    position: absolute;
+
+    &:checked {
+      +.filter-check__lable::before {
+        background-color: $activeColor;
+        border-color: $activeColor;
+        border-radius: 6px;
+      }
+
+      +.filter-check__lable::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__lable {
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    font-size: 12px;
+    line-height: 20px;
+    color: $mainFontColor;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      z-index: 1;
+      transition: 0.3s;
+    }
+
+    &:after {
+      content: "";
+      bottom: 0;
+      left: 5px;
+      margin: auto 0;
+      @include sprite($done);
+      border: none;
+      opacity: 0;
+      z-index: 2;
+    }
+  }
+}

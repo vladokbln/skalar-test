@@ -5,11 +5,9 @@ block variables
 
 block content
 	include modules/breacrumbs/breacrumbs
-	main.main
+	main.main.category__wrap
 		.container
-		.category-title__wrap
-			h1.category-title Smartphones
-			.sidebar
-
-
-
+			h1.category__title Smartphones
+			.category-flex
+				include modules/sidebar/sidebar
+				.category
