@@ -1,0 +1,33 @@
+.footer-nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 30px;
+    color: $mainFontColor;
+    padding: 5px 10px;
+  }
+
+  &__arrow {
+    display: inline-block;
+    vertical-align: middle;
+    @include sprite($sidebar-arrow);
+    transform: rotate(180deg);
+  }
+
+  &__drop {
+    display: none;
+  }
+}

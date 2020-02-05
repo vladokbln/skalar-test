@@ -1,1 +1,63 @@
-footer { flex: 0 0 auto; }
+footer {
+  flex: 0 0 auto;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.footer {
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.footer-top {
+  padding: 45px 0;
+  border-bottom: 1px solid $borderColor;
+}
+
+.footer-bottom {
+  padding: 45px 0;
+  color: #b8b8b8;
+
+  &__col {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer-copyright {
+  margin-right: 25px;
+}
+
+.footer-help {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__link {
+    padding: 0 5px;
+    color: #b8b8b8;
+  }
+}
+
+.footer-payments {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-left: 20px;
+  }
+}

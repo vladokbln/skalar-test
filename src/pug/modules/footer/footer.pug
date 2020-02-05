@@ -2,29 +2,38 @@ footer.footer
 	.footer-top
 		.container
 			a(href="#").logo.footer-top__logo QUANTUM
-			nav.footer-nav.footer-top__nav
-				ul.footer-nav__list
-					li.footer-nav__item
-						a.footer-nav__link(href="#") Shop
-							i.footer-nav__arrow
-						ul.footer-nav__drop.footer-drop
-							li.footer-drop__item
-								a.footer-drop__link(href="#") Link 1
-							li.footer-drop__item
-								a.footer-drop__link(href="#") Link 1
-					li.footer-nav__item
-						a.footer-nav__link(href="#") Journal
-					li.footer-nav__item
-						a.footer-nav__link(href="#") About
-					li.footer-nav__item
-						a.footer-nav__link(href="#") Contacts
-			ul.social-list.footer-top__social
-				li.social__item
-					a.social__link(href="#")
-						i.social__icon.social__icon--facebook
-					a.social__link(href="#")
-						i.social__icon.social__icon--twitter
-					a.social__link(href="#")
-						i.social__icon.social__icon--instagram
-					a.social__link(href="#")
-						i.social__icon.social__icon--youtube
+			include ../navigation/footer-nav
+			.footer-top__social.social
+				ul.social__list
+					li.social__item
+						a.social__link(href="#")
+							i.social__icon.social__icon--facebook
+					li.social__item
+						a.social__link(href="#")
+							i.social__icon.social__icon--twitter
+					li.social__item
+						a.social__link(href="#")
+							i.social__icon.social__icon--instagram
+					li.social__item
+						a.social__link(href="#")
+							i.social__icon.social__icon--youtube
+	.footer-bottom
+		.container
+			.footer-bottom__col
+				p.footer-copyright © 2016. Quantum UI kit
+				ul.footer-help
+					li.footer-help__item
+						a(href="#").footer-help__link Privacy Policy
+					li.footer-help__item
+						a(href="#").footer-help__link Terms of Use
+			.footer-payments
+				p.footer-payments__text Accepted payment methods
+				ul.footer-payments__list
+					li.footer-payments__item
+						img.footer-payments__img(src="img/payments/visa.png", alt="")
+					li.footer-payments__item
+						img.footer-payments__img(src="img/payments/master-card.png", alt="")
+					li.footer-payments__item
+						img.footer-payments__img(src="img/payments/pay-pal.png", alt="")
+					li.footer-payments__item
+						img.footer-payments__img(src="img/payments/amazon.png", alt="")

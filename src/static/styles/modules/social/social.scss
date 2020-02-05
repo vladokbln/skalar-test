@@ -1,0 +1,36 @@
+.social {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+
+  &__link {
+    padding: 0 5px;
+  }
+
+  &__icon {
+    display: inline-block;
+
+    &--facebook {
+      @include sprite($fb);
+    }
+
+    &--twitter {
+      @include sprite($tw);
+    }
+
+    &--instagram {
+      @include sprite($inst);
+    }
+
+    &--youtube {
+      @include sprite($yb);
+    }
+  }
+}

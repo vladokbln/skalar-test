@@ -4,8 +4,9 @@
   width: 255px;
   flex: 0 0 255px;
   color: $mainFontColor;
-	margin-right: 30px;
-	background-color: #fff;
+  margin-right: 30px;
+  padding-bottom: 10px;
+  background-color: #fff;
 
   &__content {
     max-height: 0;
@@ -37,7 +38,14 @@
 
   &__item {
     padding: 0 20px;
+
+
     border-bottom: 1px solid $borderColor;
+
+    &:last-child {
+      border: none;
+    }
+
   }
 
   &__header {
