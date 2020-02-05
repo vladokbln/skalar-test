@@ -1,7 +1,7 @@
 @import "utils/libs";
 @import "utils/vars";
 @import "utils/fonts";
-@import '../img/sprite/sprite';
+@import "../img/sprite/sprite";
 
 html {
   font-size: $base-font-size;
@@ -55,6 +55,10 @@ a {
   text-decoration: none;
   color: $linkColor;
   font-weight: 500;
+  transition: 0.3s;
+  &:hover {
+    color: $activeColor;
+  }
 }
 
 img {
@@ -67,6 +71,7 @@ button,
 textarea,
 select {
   font: inherit;
+  color: $mainFontColor;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
@@ -126,7 +131,34 @@ button {
   color: #4d4d4d;
 }
 
-
-
 //Модули
 @import "modules/modules";
+
+.selectize-input {
+  border: none;
+  box-shadow: none;
+  color: $mainFontColor;
+  & > input {
+    margin: 0 !important;
+  }
+  &.dropdown-active::before {
+    display: none;
+  }
+}
+.selectize-control.single .selectize-input::after {
+  border: none;
+  margin-top: -2px;
+  @include sprite($select-arrow);
+  .selectize-input.dropdown-active & {
+    transform: rotate(180deg);
+  }
+}
+.selectize-dropdown .option {
+  color: $mainFontColor;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+.selectize-input.focus {
+  box-shadow: none;
+}

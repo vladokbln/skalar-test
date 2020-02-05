@@ -8,7 +8,8 @@ module.exports = function() {
         "node_modules/jquery/dist/jquery.min.js",
         "node_modules/svg4everybody/dist/svg4everybody.min.js",
         "node_modules/nouislider/distribute/nouislider.js",
-        "node_modules/wnumb/wNumb.js"
+        "node_modules/wnumb/wNumb.js",
+        "node_modules/selectize/dist/js/standalone/selectize.js"
       ]) //через запятую перечисление библиотек
       .pipe(concat("libs.js"))
       .pipe($.gulp.dest("build/js/"))
@@ -24,7 +25,8 @@ module.exports = function() {
         "node_modules/jquery/dist/jquery.js",
         "node_modules/svg4everybody/dist/svg4everybody.min.js",
         "node_modules/nouislider/distribute/nouislider.js",
-        "node_modules/wnumb/wNumb.js"
+        "node_modules/wnumb/wNumb.js",
+        "node_modules/selectize/dist/js/selectize.js"
       ]) //через запятую перечисление библиотек
       .pipe(concat("libs.js"))
       .pipe(uglify())

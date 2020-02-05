@@ -4,16 +4,17 @@ header.header
 			a(href="#").logo.header-top__logo QUANTUM
 			.search.header-top__search
 				form(action="").search-form
-					input(placeholder="Search goods").search-form__input
-					select(name="category")#search-category.search-form__select
-						option(value disabled selected) Category
-						option Category 1
-						option Category 2
-						option Category 3
-						option Category 4
-						option Category 5
-					button.search-form__btn
-						i.search-form__btn-icon
+					.search-form__inner
+						input(placeholder="Search goods").search-form__input
+						select(name="category")#search-category.search-form__select
+							option(value disabled selected) Category
+							option Category 1
+							option Category 2
+							option Category 3
+							option Category 4
+							option Category 5
+						button.search-form__btn
+							i.search-form__btn-icon
 			ul.actions.header-top__actions
 				li.actions__item
 					a(href="#").actions__link

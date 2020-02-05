@@ -13,13 +13,13 @@
     position: absolute;
 
     &:checked {
-      +.filter-check__lable::before {
+      + .filter-check__lable::before {
         background-color: $activeColor;
         border-color: $activeColor;
         border-radius: 6px;
       }
 
-      +.filter-check__lable::after {
+      + .filter-check__lable::after {
         opacity: 1;
       }
     }
@@ -34,6 +34,10 @@
     line-height: 20px;
     color: $mainFontColor;
     cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
 
     &:before,
     &:after {

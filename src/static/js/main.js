@@ -3,8 +3,8 @@ $(document).ready(function() {
   svg4everybody();
   var sandwichClick = function() {
     $(document).on("click", ".catalog-nav__header", function() {
-      var sandwich = $(this).find(".sandwich");
-      sandwich.toggleClass("is-active");
+      var catalogNav = $(this).closest(".catalog-nav");
+      catalogNav.toggleClass("is-active");
     });
   };
   $(document).on("click", ".sidebar__header", function() {
@@ -23,6 +23,8 @@ $(document).ready(function() {
     $(".sorter__item").removeClass("is-active");
     $(this).addClass("is-active");
   });
+
+  $("select").selectize();
 
   sandwichClick();
 });

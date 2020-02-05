@@ -1,5 +1,4 @@
 .footer-nav {
-
   &__list {
     display: flex;
     align-items: center;
@@ -18,6 +17,7 @@
     line-height: 30px;
     color: $mainFontColor;
     padding: 5px 10px;
+    vertical-align: middle;
   }
 
   &__arrow {

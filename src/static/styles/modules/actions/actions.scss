@@ -1,22 +1,30 @@
 .actions {
-	display: flex;
-	& > * {
-		&:not(:last-child) {
-			margin-right: 35px;
-		}
-	}
-	&__icon {
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: 15px;
-		&--cart {
-			@include sprite($cart);
-		}
-		&--like {
-			@include sprite($like);
-		}
-		&--user {
-			@include sprite($user);
-		}
-	}
+  display: flex;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 20px;
+  }
+  &__text {
+    vertical-align: middle;
+  }
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    &--cart {
+      @include sprite($cart);
+    }
+    &--like {
+      @include sprite($like);
+    }
+    &--user {
+      @include sprite($user);
+    }
+  }
 }

@@ -1,32 +1,50 @@
 .search {
-	border: 1px solid $borderColor;
-	&-form {
-		&__input {
-			width: 275px;
-			// max-width: 275px;
-			border: none;
-			font-size: 14px;
-			padding: 10px 15px;
-			border-right: 1px solid $borderColor;
-			&::placeholder {
-				color: $placeholderColor;
-			}
-		}
-		&__select {
-			border: none;
-			color: $placeholderColor;
-			padding: 10px 15px;
-			border-right: 1px solid $borderColor;
-		}
-		&__btn {
-			background: none;
-			border: none;
-			padding: 10px 15px;
-			cursor: pointer;
-			i {
-				display: inline-block;
-				@include sprite($search);
-			}
-		}
-	}
+  border: 1px solid $borderColor;
+  &-form {
+    &__inner {
+      display: flex;
+      align-items: center;
+    }
+    &__input {
+      width: 275px;
+      // max-width: 275px;
+      border: none;
+      font-size: 14px;
+      padding: 10px 15px;
+      &::placeholder {
+        color: $placeholderColor;
+      }
+    }
+    &__select {
+      border: none;
+      width: 150px;
+      border-right: 1px solid $borderColor;
+      border-left: 1px solid $borderColor;
+      box-sizing: border-box;
+      .selectize-input {
+        padding: 0 50px 0 30px;
+        line-height: 50px;
+        height: 50px;
+        & > input {
+          text-transform: uppercase;
+          font-size: 10px;
+          font-weight: 900;
+          color: $placeholderColor;
+        }
+      }
+      &.selectize-control.single .selectize-input::after {
+        right: 30px;
+      }
+    }
+    &__btn {
+      background: none;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      i {
+        display: inline-block;
+        @include sprite($search);
+      }
+    }
+  }
 }

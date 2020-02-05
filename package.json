@@ -39,6 +39,7 @@
   "dependencies": {
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
+    "selectize": "^0.12.6",
     "svg4everybody": "^2.1.9"
   }
 }
