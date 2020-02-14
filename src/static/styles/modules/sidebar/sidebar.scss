@@ -7,6 +7,7 @@
   margin-right: 30px;
   padding-bottom: 10px;
   background-color: #fff;
+  margin-bottom: 40px;
 
   &__content {
     max-height: 0;
@@ -38,7 +39,7 @@
 
   &__item {
     padding: 0 20px;
-
+    background-color: #fff;
     border-bottom: 1px solid $borderColor;
 
     &:last-child {
@@ -53,9 +54,11 @@
     cursor: pointer;
     padding: 20px 0;
     transition: 0.3s;
+
     &:hover {
       opacity: 0.5;
     }
+
     .sidebar__item.is-active & {
       opacity: 0.5;
     }
@@ -92,7 +95,27 @@
       font-size: 12px;
     }
   }
+
+  &-overlay {
+    opacity: 0;
+    width: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: opacity 0.5s;
+    z-index: 2;
+
+    &.is-active {
+      opacity: 1;
+      width: 100%;
+    }
+  }
 }
+
+
 
 @import "filter-price";
 @import "filter-check";

@@ -19,7 +19,7 @@
       box-shadow: none;
       border-radius: 50%;
       border: transparent;
-
+      outline: none;
       &-upper {
         right: 0px;
       }
@@ -29,6 +29,9 @@
         display: none;
       }
     }
+    .noUi-origin {
+      z-index: auto !important;
+    }
   }
 
   .noUi-connect {
@@ -37,15 +40,17 @@
     left: 0;
     margin: 0 auto;
   }
-
+  .noUi-base {
+    z-index: auto;
+  }
   &__inner {
+    margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   &__input {
-    margin-top: 30px;
     width: 90px;
     height: 40px;
     border: 1px solid $borderColor;

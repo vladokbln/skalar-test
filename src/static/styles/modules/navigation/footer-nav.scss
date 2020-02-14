@@ -2,10 +2,23 @@
   &__list {
     display: flex;
     align-items: center;
+
   }
 
   &__item {
     margin-right: 40px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      .footer-nav__drop {
+        max-height: 999px;
+        // height: 150px;
+        opacity: 1;
+        overflow: visible;
+        transition: opacity 0.2s ease-in;
+      }
+    }
 
     &:last-child {
       margin-right: 0;
@@ -27,7 +40,24 @@
     transform: rotate(180deg);
   }
 
-  &__drop {
-    display: none;
+
+}
+
+.footer-drop {
+  width: 150%;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.2s ease-out;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+
+  &__link {
+    padding: 10px 20px;
+    display: block;
   }
 }

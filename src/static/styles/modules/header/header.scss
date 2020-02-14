@@ -22,6 +22,29 @@ header {
   &__search {
     margin-right: 65px;
   }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+
+    &>* {
+      &:not(:last-child) {
+        margin-right: 35px;
+      }
+    }
+
+    .actions__link {
+      height: 20px;
+    }
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  .mobile-menu {
+    margin-left: auto;
+  }
 }
 
 .header-main {
@@ -32,13 +55,20 @@ header {
     align-items: center;
   }
 
-  &__catalog-nav {
+  .catalog-nav {
     border-right: 1px solid $borderColor;
     border-left: 1px solid $borderColor;
+    padding: 0px 30px;
   }
 
   &__info {
+    display: flex;
+    align-items: center;
     margin-left: auto;
+
+    .info__item {
+      height: 60px;
+    }
   }
 
   .info__item {
@@ -46,6 +76,14 @@ header {
 
     &:first-child {
       border-left: 1px solid $borderColor;
+    }
+  }
+
+  .main-nav {
+    &__list {
+      display: flex;
+      align-items: center;
+      height: 60px;
     }
   }
 }

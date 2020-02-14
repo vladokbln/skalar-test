@@ -5,14 +5,16 @@ block variables
 
 block content
 	include modules/breacrumbs/breacrumbs
-	main.main.category__wrap
+	main.main
 		.container
-			h1.category__title Smartphones
+			h1.title-page Smartphones
 			.category__flex
 				.category-sidebar
+					.sidebar-overlay
 					include modules/sidebar/sidebar
 				.category
 					.category-header
+						button.category-header__filter-btn#sidebar-btn Filter
 						.sorter.category__sorter
 							ul.sorter__list
 								li.sorter__item.is-active

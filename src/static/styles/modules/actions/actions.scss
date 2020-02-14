@@ -1,14 +1,7 @@
 .actions {
-  display: flex;
-  & > * {
-    &:not(:last-child) {
-      margin-right: 35px;
-    }
-  }
   &__link {
     display: flex;
     align-items: center;
-    height: 20px;
   }
   &__text {
     vertical-align: middle;

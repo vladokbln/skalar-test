@@ -13,13 +13,13 @@
     position: absolute;
 
     &:checked {
-      + .filter-check__lable::before {
+      +.filter-check__lable::before {
         background-color: $activeColor;
         border-color: $activeColor;
         border-radius: 6px;
       }
 
-      + .filter-check__lable::after {
+      +.filter-check__lable::after {
         opacity: 1;
       }
     }
@@ -35,9 +35,6 @@
     color: $mainFontColor;
     cursor: pointer;
     transition: 0.3s;
-    &:hover {
-      opacity: 0.5;
-    }
 
     &:before,
     &:after {
@@ -52,7 +49,6 @@
       height: 20px;
       border: 1px solid #ccc;
       border-radius: 4px;
-      z-index: 1;
       transition: 0.3s;
     }
 
@@ -64,7 +60,6 @@
       @include sprite($done);
       border: none;
       opacity: 0;
-      z-index: 2;
     }
   }
 }

@@ -1,6 +1,4 @@
 .sorter {
-
-
   &__list {
     display: flex;
     align-items: center;
@@ -14,8 +12,9 @@
     margin: 0 25px;
     font-size: 13px;
     color: $linkColor;
-		border-bottom: 2px solid transparent;
-		cursor: pointer;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+
     &.is-active {
       color: $activeColor;
       border-bottom: 2px solid $activeColor;

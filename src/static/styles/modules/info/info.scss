@@ -1,16 +1,15 @@
 .info {
-  display: flex;
-  align-items: center;
   &__item {
-    height: 60px;
     display: flex;
     align-items: center;
   }
+
   &__select {
     border: none;
     color: $placeholderColor;
+
     .selectize-input {
-      padding: 10px 30px;
+      padding: 20px 30px;
     }
   }
 }

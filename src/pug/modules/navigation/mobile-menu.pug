@@ -1,0 +1,50 @@
+.mobile-menu
+	.sandwich.mobile-menu__sandwich
+		.sandwich__line.sandwich__line--top
+		.sandwich__line.sandwich__line--middle
+		.sandwich__line.sandwich__line--bottom
+	.mobile-menu__overlay
+	.mobile-menu__content
+		include catalog-nav
+		nav.main-nav.mobile-menu__main-nav
+			ul.main-nav__list
+				li.main-nav__item
+					a.main-nav__link(href="test.html") Super Deals
+				li.main-nav__item
+					a.main-nav__link(href="#") Featured Brands
+				li.main-nav__item
+					a.main-nav__link(href="#") Collections
+				li.main-nav__item
+					a.main-nav__link(href="#") Bestselling
+		ul.actions.mobile-menu__actions
+			li.actions__item
+				a(href="#").actions__link
+					i.actions__icon.actions__icon--cart
+					span.actions__text 2 Items
+			li.actions__item
+				a(href="#").actions__link
+					i.actions__icon.actions__icon--like
+					span(href="#").actions__text Wish List
+			li.actions__item
+				a(href="#").actions__link
+					i.actions__icon.actions__icon--user
+					span(href="#").actions__text Sing in		
+		.info.mobile-menu__info
+			.info__item
+				select.info__select(name="")
+					option(value disabled selected) Help
+					option() Option 1
+					option() Option 2
+					option() Option 3
+			.info__item
+				select.info__select(name="")
+					option(value disabled selected) USD
+					option() RUB
+					option() UAH
+					option() USD
+			.info__item
+				select.info__select(name="")
+					option(value disabled selected) Language
+					option() RU
+					option() UA
+					option() ENG
